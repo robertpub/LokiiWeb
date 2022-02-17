@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Credits</title>
+    <style>
+        body {
+            font-family: system-ui, PingFang SC, STHeiti, sans-serif;
+            font-size: 75%;
+        }
+
+        button {
+            font-family: system-ui, PingFang SC, STHeiti, sans-serif;
+        }
+
+        html {
+            --google-blue-50: rgb(232, 240, 254);
+            --google-blue-300: rgb(138, 180, 248);
+            --google-blue-600: rgb(26, 115, 232);
+            --google-blue-900: rgb(23, 78, 166);
+            --google-grey-200: rgb(232, 234, 237);
+            --google-grey-800: rgb(60, 64, 67);
+            --google-grey-900: rgb(32, 33, 36);
+
+            --interactive-color: var(--google-blue-600);
+            --primary-color: var(--google-grey-900);
+
+            --product-background: var(--google-blue-50);
+            --product-text-color: var(--google-blue-900);
+
+            background: white;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html {
+                --interactive-color: var(--google-blue-300);
+                --primary-color: var(--google-grey-200);
+
+                --product-background: var(--google-grey-800);
+                --product-text-color: var(--google-grey-200);
+
+                background: var(--google-grey-900);
+            }
+        }
+
+        body {
+            color: var(--primary-color);
+            font-size: 84%;
+            max-width: 1020px;
+        }
+
+        a {
+            color: var(--interactive-color);
+        }
+
+        .page-title {
+            font-size: 164%;
+            font-weight: bold;
+        }
+
+        .product {
+            background-color: var(--product-background);
+            color: var(--product-text-color);
+            border-radius: 5px;
+            margin-top: 16px;
+            overflow: auto;
+            padding: 2px;
+        }
+
+        .product .title {
+            float: left;
+            font-size: 110%;
+            font-weight: bold;
+            margin: 3px;
+        }
+
+        .product .homepage {
+            color: var(--interactive-color);
+            float: right;
+            margin: 3px;
+            text-align: right;
+        }
+
+        .product .homepage::before {
+            content: " - ";
+        }
+
+        .product .show {
+            color: var(--interactive-color);
+            float: right;
+            margin: 3px;
+            text-align: right;
+            text-decoration: underline;
+        }
+
+        .licence {
+            border-radius: 3px;
+            clear: both;
+            display: none;
+            padding: 16px;
+        }
+
+        .licence h3 {
+            margin-top: 0;
+        }
+
+        .licence pre {
+            white-space: pre-wrap;
+        }
+
+        .dialog #print-link,
+        .dialog .homepage {
+            display: none;
+        }
+
+        input+label+div {
+            display: none;
+        }
+
+        input+label::after {
+            content: "show license";
+            cursor: pointer;
+        }
+
+        input:checked+label+div {
+            display: block;
+        }
+
+        input:checked+label::after {
+            content: "hide license";
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="page-title" style="float:left;">Credits</span>
+    <div style="clear:both; overflow:auto;">
+        <div class="product">
+            <span class="title">Toast-Swift</span>
+            <span class="homepage"><a href="https://github.com/BastiaanJansen/toast-swift">homepage</a></span>
+            <input type="checkbox" hidden="" id="0">
+            <label class="show" for="0" tabindex="0"></label>
+            <div class="licence">
+                <pre>MIT License
+
+                    Copyright (c) 2021 Bastiaan Jansen
+                    
+                    Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the "Software"), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:
+                    
+                    The above copyright notice and this permission notice shall be included in all
+                    copies or substantial portions of the Software.
+                    
+                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                    SOFTWARE.
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
